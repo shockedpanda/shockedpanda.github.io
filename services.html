@@ -7,27 +7,56 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-        /* Simple style to float images left next to section headings */
+        /* Service section styling */
+        .service-section {
+            margin-bottom: 3em;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 2em;
+            overflow: auto;  /* clearfix */
+        }
+        .service-section h3 {
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 0.5em;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .service-section h3 img.logo-icon {
+            height: 2rem;
+            width: auto;
+            vertical-align: middle;
+        }
+        .service-section p {
+            margin-left: 0;
+            margin-top: 0.5em;
+            line-height: 1.5;
+        }
+        /* For on‑demand tools: image floated left */
         .service-img {
             float: left;
-            width: 120px;
+            width: 140px;
             margin: 0 1.5em 1em 0;
             border-radius: 8px;
         }
-        .service-section {
-            overflow: auto;
-            margin-bottom: 2.5em;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 1.5em;
-        }
-        .service-section h3 {
-            margin-top: 0;
+        /* Clearfix for description below both image and heading */
+        .service-section .desc {
+            clear: both;
         }
         @media (max-width: 736px) {
             .service-img {
-                width: 80px;
+                width: 100px;
                 margin-right: 1em;
             }
+            .service-section h3 {
+                font-size: 1.4rem;
+            }
+            .service-section h3 img.logo-icon {
+                height: 1.5rem;
+            }
+        }
+        .major-section {
+            margin-top: 2.5em;
         }
     </style>
 </head>
@@ -64,86 +93,83 @@
                     <p>Everything we offer – from audits to fully built tools – is available on request. You only pay for what you use, and we open‑source stripped‑down versions for DIY teams.</p>
                 </header>
 
-                <!-- Core services with images -->
+                <!-- Core services (no side images) -->
                 <div id="audit" class="service-section">
-                    <img src="images/pic01.jpg" alt="Audit" class="service-img" />
-                    <h3>🔍 Compliance Automation Audit</h3>
+                    <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> Compliance Automation Audit</h3>
                     <p>We map your current KYC/AML workflows, identify repetitive high‑volume tasks, and deliver a prioritised automation roadmap. You receive a concrete report, not just advice. The audit is a one‑time engagement that serves as the blueprint for any pilot or full deployment.</p>
                 </div>
 
                 <div id="pilot" class="service-section">
-                    <img src="images/pic02.jpg" alt="Pilot" class="service-img" />
-                    <h3>🚀 Pilot Build</h3>
+                    <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> Pilot Build</h3>
                     <p>We adapt OnboardAI and PolicyPulse to your exact documents and deploy them on your infrastructure – self‑hosted or fully guided setup. The pilot typically runs for 4‑6 weeks and demonstrates tangible time savings. No vendor lock‑in: the code runs on your hardware, and you keep full ownership of any customisations.</p>
                 </div>
 
                 <div id="support" class="service-section">
-                    <img src="images/pic03.jpg" alt="Support" class="service-img" />
-                    <h3>🛠️ Ongoing Support</h3>
+                    <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> Ongoing Support</h3>
                     <p>A monthly retainer that covers updates, new features, and maintenance as your requirements evolve. Your data never leaves your control. Support also includes access to our private repository of compliance automation modules and priority email/chat assistance.</p>
                 </div>
 
                 <div id="local-llms" class="service-section">
-                    <img src="images/pic03.jpg" alt="Local LLMs" class="service-img" />
-                    <h3>🧠 Local LLMs • Docker • No Cloud</h3>
+                    <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> Local LLMs • Docker • No Cloud</h3>
                     <p>All our tools run on Llama 3.1, OCR, and containerised deployment (Docker). You stay in control – your data never leaves your infrastructure. We provide pre‑built container images, orchestration scripts, and documentation for air‑gapped environments.</p>
                 </div>
 
                 <h2 class="major" style="margin-top: 2em;">On‑demand tools (build on request)</h2>
                 <p>Any of the following can be built for your organisation. After delivery, we release a stripped‑down open‑source version on GitHub for the community.</p>
 
+                <!-- On‑demand tools with side images and logo in heading -->
                 <div id="onboardai" class="service-section">
                     <img src="images/pic01.jpg" alt="OnboardAI" class="service-img" />
-                    <h3>📄 OnboardAI – Automated KYC Onboarding</h3>
-                    <p>Our flagship tool: drop a client pack into a folder → document completeness check → identity & risk data extraction → sanctions/PEP screening → professional Word report. Fully offline, customisable to your document templates and risk rules.</p>
+                    <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> OnboardAI – Automated KYC Onboarding</h3>
+                    <p class="desc">Our flagship tool: drop a client pack into a folder → document completeness check → identity & risk data extraction → sanctions/PEP screening → professional Word report. Fully offline, customisable to your document templates and risk rules.</p>
                 </div>
 
                 <div id="policypulse" class="service-section">
                     <img src="images/pic02.jpg" alt="PolicyPulse" class="service-img" />
-                    <h3>📜 PolicyPulse – AML Policy Update Engine</h3>
-                    <p>Input your AML policy plus a new regulatory notice. The engine performs a section‑by‑section comparison, flags changes, and produces a reviewer checklist with diffs and citations. Uses a local vector database to learn from past regulatory updates.</p>
+                    <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> PolicyPulse – AML Policy Update Engine</h3>
+                    <p class="desc">Input your AML policy plus a new regulatory notice. The engine performs a section‑by‑section comparison, flags changes, and produces a reviewer checklist with diffs and citations. Uses a local vector database to learn from past regulatory updates.</p>
                 </div>
 
                 <div id="kyc-validator" class="service-section">
                     <img src="images/pic04.jpg" alt="KYC Validator" class="service-img" />
-                    <h3>✅ KYC Document Certification Validator</h3>
-                    <p>Automatically checks certification wording, dates, and certifier details. Flags non‑compliant documents before they reach human review, reducing back‑and‑forth with clients.</p>
+                    <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> KYC Document Certification Validator</h3>
+                    <p class="desc">Automatically checks certification wording, dates, and certifier details. Flags non‑compliant documents before they reach human review, reducing back‑and‑forth with clients.</p>
                 </div>
 
                 <div id="str-assistant" class="service-section">
                     <img src="images/pic05.jpg" alt="STR Assistant" class="service-img" />
-                    <h3>📝 STR/SAR Drafting Assistant</h3>
-                    <p>Analyses transaction data, flags unusual patterns, and drafts suspicious transaction report narratives for MLRO review. The MLRO retains final approval and can edit before submission.</p>
+                    <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> STR/SAR Drafting Assistant</h3>
+                    <p class="desc">Analyses transaction data, flags unusual patterns, and drafts suspicious transaction report narratives for MLRO review. The MLRO retains final approval and can edit before submission.</p>
                 </div>
 
                 <div id="compliance-librarian" class="service-section">
                     <img src="images/pic06.jpg" alt="Compliance Librarian" class="service-img" />
-                    <h3>📚 Compliance Librarian</h3>
-                    <p>A chat‑based assistant that retrieves the right documents from your secure store, checks expiration dates, and assembles submission packs on request. Works with natural language queries like “Show me all expired CDD for client X”.</p>
+                    <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> Compliance Librarian</h3>
+                    <p class="desc">A chat‑based assistant that retrieves the right documents from your secure store, checks expiration dates, and assembles submission packs on request. Works with natural language queries like “Show me all expired CDD for client X”.</p>
                 </div>
 
                 <div id="ongoing-monitoring" class="service-section">
                     <img src="images/pic07.jpg" alt="Ongoing Monitoring" class="service-img" />
-                    <h3>🔄 Ongoing Monitoring Engine</h3>
-                    <p>Periodically re‑screens client names against updated sanctions/PEP lists and scrapes adverse media sources. Reports only what’s changed, with a clear audit trail.</p>
+                    <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> Ongoing Monitoring Engine</h3>
+                    <p class="desc">Periodically re‑screens client names against updated sanctions/PEP lists and scrapes adverse media sources. Reports only what’s changed, with a clear audit trail.</p>
                 </div>
 
                 <div id="corporate-librarian" class="service-section">
                     <img src="images/pic08.jpg" alt="Corporate Librarian" class="service-img" />
-                    <h3>🏢 Corporate Documents Librarian</h3>
-                    <p>Specialised version of the Compliance Librarian focused on corporate entities – retrieves articles of incorporation, ownership charts, and board minutes, and checks validity dates.</p>
+                    <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> Corporate Documents Librarian</h3>
+                    <p class="desc">Specialised version of the Compliance Librarian focused on corporate entities – retrieves articles of incorporation, ownership charts, and board minutes, and checks validity dates.</p>
                 </div>
 
                 <div id="board-reports" class="service-section">
                     <img src="images/pic09.jpg" alt="Board Reports" class="service-img" />
-                    <h3>📊 Board/MI Report Compiler</h3>
-                    <p>Pulls data from multiple compliance sources (transaction monitoring, screening, case management) and drafts ready‑to‑review board packs and management information reports in Word/PDF.</p>
+                    <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> Board/MI Report Compiler</h3>
+                    <p class="desc">Pulls data from multiple compliance sources (transaction monitoring, screening, case management) and drafts ready‑to‑review board packs and management information reports in Word/PDF.</p>
                 </div>
 
                 <div id="regulatory-impact" class="service-section">
                     <img src="images/pic04.jpg" alt="Regulatory Impact" class="service-img" />
-                    <h3>⚖️ Regulatory Change Impact Assessor</h3>
-                    <p>Maps new regulatory requirements directly to your internal controls, not just policy wording. Shows exactly which controls need updating, with suggested remediation steps.</p>
+                    <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> Regulatory Change Impact Assessor</h3>
+                    <p class="desc">Maps new regulatory requirements directly to your internal controls, not just policy wording. Shows exactly which controls need updating, with suggested remediation steps.</p>
                 </div>
 
                 <div style="text-align: center; margin: 3em 0;">
