@@ -1,122 +1,187 @@
 <!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Services – DossierCore</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+    <title>Services – DossierCore</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* Simple style to float images left next to section headings */
+        .service-img {
+            float: left;
+            width: 120px;
+            margin: 0 1.5em 1em 0;
+            border-radius: 8px;
+        }
+        .service-section {
+            overflow: auto;
+            margin-bottom: 2.5em;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 1.5em;
+        }
+        .service-section h3 {
+            margin-top: 0;
+        }
+        @media (max-width: 736px) {
+            .service-img {
+                width: 80px;
+                margin-right: 1em;
+            }
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <div id="page-wrapper">
+        <!-- Header -->
+        <header id="header">
+            <h1><a href="index.html">DossierCore</a></h1>
+            <!-- To use logo.png instead of text, replace above line with:
+            <h1><a href="index.html"><img src="images/logo.png" alt="DossierCore" style="height: 40px; vertical-align: middle;" /></a></h1>
+            -->
+            <nav><a href="#menu">Menu</a></nav>
+        </header>
 
-		<div id="page-wrapper">
+        <!-- Menu -->
+        <nav id="menu">
+            <div class="inner">
+                <h2>Menu</h2>
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="roadmap.html">Roadmap</a></li>
+                </ul>
+                <a href="#" class="close">Close</a>
+            </div>
+        </nav>
 
-			<!-- Header -->
-				<header id="header">
-					<h1><a href="index.html">DossierCore</a></h1>
-					<nav>
-						<a href="#menu">Menu</a>
-					</nav>
-				</header>
+        <!-- Main content -->
+        <section id="wrapper">
+            <div style="height: 6em;"></div>
+            <div class="inner">
+                <header class="major">
+                    <h2>Our services & tools</h2>
+                    <p>Everything we offer – from audits to fully built tools – is available on request. You only pay for what you use, and we open‑source stripped‑down versions for DIY teams.</p>
+                </header>
 
-			<!-- Menu -->
-				<nav id="menu">
-					<div class="inner">
-						<h2>Menu</h2>
-						<ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="services.html">Services</a></li>
-							<li><a href="roadmap.html">Roadmap</a></li>
-						</ul>
-						<a href="#" class="close">Close</a>
-					</div>
-				</nav>
+                <!-- Core services with images -->
+                <div id="audit" class="service-section">
+                    <img src="images/pic01.jpg" alt="Audit" class="service-img" />
+                    <h3>🔍 Compliance Automation Audit</h3>
+                    <p>We map your current KYC/AML workflows, identify repetitive high‑volume tasks, and deliver a prioritised automation roadmap. You receive a concrete report, not just advice. The audit is a one‑time engagement that serves as the blueprint for any pilot or full deployment.</p>
+                </div>
 
-			<!-- Main -->
-				<section id="wrapper">
-					<div class="inner">
-						<header class="major">
-							<h2>Our service model</h2>
-							<p>From audit to ongoing support – we meet you where you are.</p>
-						</header>
-					</div>
+                <div id="pilot" class="service-section">
+                    <img src="images/pic02.jpg" alt="Pilot" class="service-img" />
+                    <h3>🚀 Pilot Build</h3>
+                    <p>We adapt OnboardAI and PolicyPulse to your exact documents and deploy them on your infrastructure – self‑hosted or fully guided setup. The pilot typically runs for 4‑6 weeks and demonstrates tangible time savings. No vendor lock‑in: the code runs on your hardware, and you keep full ownership of any customisations.</p>
+                </div>
 
-					<!-- Content -->
-						<div class="wrapper alt style1">
-							<div class="inner">
-								<section class="features">
-									<article>
-										<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-										<h3 class="major">Compliance Automation Audit</h3>
-										<p>We map your current KYC/AML workflows, identify repetitive high‑volume tasks, and deliver a prioritised automation roadmap. You get a concrete report, not just advice.</p>
-										<a href="#" class="special">Learn more</a>
-									</article>
-									<article>
-										<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-										<h3 class="major">Pilot Build</h3>
-										<p>We adapt OnboardAI and PolicyPulse to your exact documents and deploy them on your infrastructure – self‑hosted or guided setup. Full transparency, no vendor lock‑in.</p>
-										<a href="#" class="special">Learn more</a>
-									</article>
-									<article>
-										<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-										<h3 class="major">Ongoing Support</h3>
-										<p>Monthly retainer for updates, new features, and maintenance as your requirements evolve. Your data never leaves your control.</p>
-										<a href="#" class="special">Learn more</a>
-									</article>
-								</section>
-								<section class="inner" style="text-align: center; margin-top: 3em;">
-									<h3>Ready to start?</h3>
-									<p>Contact us to discuss a compliance audit or pilot.</p>
-									<ul class="actions">
-										<li><a href="mailto:shanegjd@gmail.com" class="button primary">Email us</a></li>
-										<li><a href="#" class="button">Schedule a call</a></li>
-									</ul>
-								</section>
-							</div>
-						</div>
-				</section>
+                <div id="support" class="service-section">
+                    <img src="images/pic03.jpg" alt="Support" class="service-img" />
+                    <h3>🛠️ Ongoing Support</h3>
+                    <p>A monthly retainer that covers updates, new features, and maintenance as your requirements evolve. Your data never leaves your control. Support also includes access to our private repository of compliance automation modules and priority email/chat assistance.</p>
+                </div>
 
-			<!-- Footer -->
-				<section id="footer">
-					<div class="inner">
-						<h2 class="major">Get in touch</h2>
-						<p>Interested in a compliance audit or pilot? Contact us to discuss how DossierCore can streamline your AML/KYC workflows.</p>
-						
-						<p><strong>Email:</strong> <a href="mailto:shanegjd@gmail.com">shanegjd@gmail.com</a></p>
-						<p><strong>Or request a compliance audit:</strong> <a href="#">Schedule a call →</a></p>
-						
-						<ul class="contact">
-							<li class="icon solid fa-home">
-								DossierCore<br />
-								Singapore<br />
-								(Remote - global)
-							</li>
-							<li class="icon solid fa-phone">+65 8828 9061</li>
-							<li class="icon solid fa-envelope"><a href="mailto:shanegjd@gmail.com">shanegjd@gmail.com</a></li>
-							<li class="icon brands fa-linkedin"><a href="https://linkedin.com/in/shanegjd">linkedin.com/in/shanegjd</a></li>
-							<li class="icon brands fa-github"><a href="https://github.com/shockedpanda">github.com/shockedpanda</a></li>
-						</ul>
-						
-						<ul class="copyright">
-							<li>&copy; DossierCore. All rights reserved.</li>
-							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</div>
-				</section>
+                <div id="local-llms" class="service-section">
+                    <img src="images/pic03.jpg" alt="Local LLMs" class="service-img" />
+                    <h3>🧠 Local LLMs • Docker • No Cloud</h3>
+                    <p>All our tools run on Llama 3.1, OCR, and containerised deployment (Docker). You stay in control – your data never leaves your infrastructure. We provide pre‑built container images, orchestration scripts, and documentation for air‑gapped environments.</p>
+                </div>
 
-		</div>
+                <h2 class="major" style="margin-top: 2em;">On‑demand tools (build on request)</h2>
+                <p>Any of the following can be built for your organisation. After delivery, we release a stripped‑down open‑source version on GitHub for the community.</p>
 
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+                <div id="onboardai" class="service-section">
+                    <img src="images/pic01.jpg" alt="OnboardAI" class="service-img" />
+                    <h3>📄 OnboardAI – Automated KYC Onboarding</h3>
+                    <p>Our flagship tool: drop a client pack into a folder → document completeness check → identity & risk data extraction → sanctions/PEP screening → professional Word report. Fully offline, customisable to your document templates and risk rules.</p>
+                </div>
 
-	</body>
+                <div id="policypulse" class="service-section">
+                    <img src="images/pic02.jpg" alt="PolicyPulse" class="service-img" />
+                    <h3>📜 PolicyPulse – AML Policy Update Engine</h3>
+                    <p>Input your AML policy plus a new regulatory notice. The engine performs a section‑by‑section comparison, flags changes, and produces a reviewer checklist with diffs and citations. Uses a local vector database to learn from past regulatory updates.</p>
+                </div>
+
+                <div id="kyc-validator" class="service-section">
+                    <img src="images/pic04.jpg" alt="KYC Validator" class="service-img" />
+                    <h3>✅ KYC Document Certification Validator</h3>
+                    <p>Automatically checks certification wording, dates, and certifier details. Flags non‑compliant documents before they reach human review, reducing back‑and‑forth with clients.</p>
+                </div>
+
+                <div id="str-assistant" class="service-section">
+                    <img src="images/pic05.jpg" alt="STR Assistant" class="service-img" />
+                    <h3>📝 STR/SAR Drafting Assistant</h3>
+                    <p>Analyses transaction data, flags unusual patterns, and drafts suspicious transaction report narratives for MLRO review. The MLRO retains final approval and can edit before submission.</p>
+                </div>
+
+                <div id="compliance-librarian" class="service-section">
+                    <img src="images/pic06.jpg" alt="Compliance Librarian" class="service-img" />
+                    <h3>📚 Compliance Librarian</h3>
+                    <p>A chat‑based assistant that retrieves the right documents from your secure store, checks expiration dates, and assembles submission packs on request. Works with natural language queries like “Show me all expired CDD for client X”.</p>
+                </div>
+
+                <div id="ongoing-monitoring" class="service-section">
+                    <img src="images/pic07.jpg" alt="Ongoing Monitoring" class="service-img" />
+                    <h3>🔄 Ongoing Monitoring Engine</h3>
+                    <p>Periodically re‑screens client names against updated sanctions/PEP lists and scrapes adverse media sources. Reports only what’s changed, with a clear audit trail.</p>
+                </div>
+
+                <div id="corporate-librarian" class="service-section">
+                    <img src="images/pic08.jpg" alt="Corporate Librarian" class="service-img" />
+                    <h3>🏢 Corporate Documents Librarian</h3>
+                    <p>Specialised version of the Compliance Librarian focused on corporate entities – retrieves articles of incorporation, ownership charts, and board minutes, and checks validity dates.</p>
+                </div>
+
+                <div id="board-reports" class="service-section">
+                    <img src="images/pic09.jpg" alt="Board Reports" class="service-img" />
+                    <h3>📊 Board/MI Report Compiler</h3>
+                    <p>Pulls data from multiple compliance sources (transaction monitoring, screening, case management) and drafts ready‑to‑review board packs and management information reports in Word/PDF.</p>
+                </div>
+
+                <div id="regulatory-impact" class="service-section">
+                    <img src="images/pic04.jpg" alt="Regulatory Impact" class="service-img" />
+                    <h3>⚖️ Regulatory Change Impact Assessor</h3>
+                    <p>Maps new regulatory requirements directly to your internal controls, not just policy wording. Shows exactly which controls need updating, with suggested remediation steps.</p>
+                </div>
+
+                <div style="text-align: center; margin: 3em 0;">
+                    <ul class="actions">
+                        <li><a href="mailto:shanegjd@gmail.com" class="button primary">Request a service →</a></li>
+                        <li><a href="roadmap.html" class="button">See open‑source roadmap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section id="footer">
+            <div class="inner">
+                <h2 class="major">Get in touch</h2>
+                <p>Interested in a compliance audit or pilot? Contact us to discuss how DossierCore can streamline your AML/KYC workflows.</p>
+                <p><strong>Email:</strong> <a href="mailto:shanegjd@gmail.com">shanegjd@gmail.com</a></p>
+                <p><strong>Or request a compliance audit:</strong> <a href="#">Schedule a call →</a></p>
+                <ul class="contact">
+                    <li class="icon solid fa-home">DossierCore<br />Singapore<br />(Remote - global)</li>
+                    <li class="icon solid fa-phone">+65 8828 9061</li>
+                    <li class="icon solid fa-envelope"><a href="mailto:shanegjd@gmail.com">shanegjd@gmail.com</a></li>
+                    <li class="icon brands fa-linkedin"><a href="https://linkedin.com/in/shanegjd">linkedin.com/in/shanegjd</a></li>
+                    <li class="icon brands fa-github"><a href="https://github.com/shockedpanda">github.com/shockedpanda</a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; DossierCore. All rights reserved.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
