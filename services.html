@@ -7,15 +7,14 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-        /* Service section styling */
+        /* Simple style for service sections */
         .service-section {
-            margin-bottom: 3em;
+            margin-bottom: 2.5em;
             border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 2em;
-            overflow: auto;  /* clearfix */
+            padding-bottom: 1.5em;
+            overflow: auto; /* clearfix */
         }
         .service-section h3 {
-            font-size: 1.8rem;
             margin-top: 0;
             margin-bottom: 0.5em;
             display: flex;
@@ -23,23 +22,16 @@
             gap: 0.75rem;
         }
         .service-section h3 img.logo-icon {
-            height: 2rem;
+            height: 1.8rem;
             width: auto;
             vertical-align: middle;
         }
-        .service-section p {
-            margin-left: 0;
-            margin-top: 0.5em;
-            line-height: 1.5;
-        }
-        /* For on‑demand tools: image floated left */
         .service-img {
             float: left;
             width: 140px;
             margin: 0 1.5em 1em 0;
             border-radius: 8px;
         }
-        /* Clearfix for description below both image and heading */
         .service-section .desc {
             clear: both;
         }
@@ -48,30 +40,19 @@
                 width: 100px;
                 margin-right: 1em;
             }
-            .service-section h3 {
-                font-size: 1.4rem;
-            }
             .service-section h3 img.logo-icon {
-                height: 1.5rem;
+                height: 1.4rem;
             }
-        }
-        .major-section {
-            margin-top: 2.5em;
         }
     </style>
 </head>
 <body class="is-preload">
     <div id="page-wrapper">
-        <!-- Header -->
         <header id="header">
             <h1><a href="index.html">DossierCore</a></h1>
-            <!-- To use logo.png instead of text, replace above line with:
-            <h1><a href="index.html"><img src="images/logo.png" alt="DossierCore" style="height: 40px; vertical-align: middle;" /></a></h1>
-            -->
             <nav><a href="#menu">Menu</a></nav>
         </header>
 
-        <!-- Menu -->
         <nav id="menu">
             <div class="inner">
                 <h2>Menu</h2>
@@ -84,7 +65,6 @@
             </div>
         </nav>
 
-        <!-- Main content -->
         <section id="wrapper">
             <div style="height: 6em;"></div>
             <div class="inner">
@@ -117,59 +97,67 @@
                 <h2 class="major" style="margin-top: 2em;">On‑demand tools (build on request)</h2>
                 <p>Any of the following can be built for your organisation. After delivery, we release a stripped‑down open‑source version on GitHub for the community.</p>
 
-                <!-- On‑demand tools with side images and logo in heading -->
+                <!-- OnboardAI -->
                 <div id="onboardai" class="service-section">
                     <img src="images/pic01.jpg" alt="OnboardAI" class="service-img" />
                     <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> OnboardAI – Automated KYC Onboarding</h3>
-                    <p class="desc">Our flagship tool: drop a client pack into a folder → document completeness check → identity & risk data extraction → sanctions/PEP screening → professional Word report. Fully offline, customisable to your document templates and risk rules.</p>
+                    <p class="desc"><strong>What it looks like:</strong> A folder watcher + web dashboard. Drop client packs (PDFs, images, Word files) into a monitored folder. The tool extracts identity data, runs sanctions/PEP checks, and generates a structured Word report. <strong>Example output:</strong> A 5‑page report with risk score, extracted fields, and a compliance checklist. <strong>How it works:</strong> Uses local Llama 3.1 via Ollama, Tesseract OCR, and a rule‑based completeness validator. No data ever leaves your server.</p>
                 </div>
 
-                <div id="policypulse" class="service-section">
-                    <img src="images/pic02.jpg" alt="PolicyPulse" class="service-img" />
-                    <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> PolicyPulse – AML Policy Update Engine</h3>
-                    <p class="desc">Input your AML policy plus a new regulatory notice. The engine performs a section‑by‑section comparison, flags changes, and produces a reviewer checklist with diffs and citations. Uses a local vector database to learn from past regulatory updates.</p>
-                </div>
+                <!-- PolicyPulse -->
+				<div id="policypulse" class="service-section">
+					<img src="images/pic02.jpg" alt="PolicyPulse" class="service-img" />
+					<h3><img src="images/logo.png" alt="logo" class="logo-icon" /> PolicyPulse – AML Policy Update Engine</h3>
+					<p class="desc"><strong>Current POC:</strong> Runs in the background – you drop your AML policy plus a new regulatory notice into a folder. The tool performs a section‑by‑section comparison, flags changes, and outputs a change log table with citations and a “reviewer checklist” (Word or PDF). <strong>Example output:</strong> A report that guides compliance officers through each impacted section, showing old vs. new wording and suggested actions. <strong>How it works:</strong> Uses a local vector database (Chroma) to compare semantic meaning, not just text diffs. Learns from past regulatory updates to improve accuracy. <strong>Optional UI:</strong> For clients who prefer an interactive side‑by‑side view, we can build a simple two‑panel interface on request.</p>
+				</div>
 
+                <!-- KYC Document Certification Validator -->
                 <div id="kyc-validator" class="service-section">
                     <img src="images/pic04.jpg" alt="KYC Validator" class="service-img" />
                     <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> KYC Document Certification Validator</h3>
-                    <p class="desc">Automatically checks certification wording, dates, and certifier details. Flags non‑compliant documents before they reach human review, reducing back‑and‑forth with clients.</p>
+                    <p class="desc"><strong>What it looks like:</strong> A bulk upload screen where you drop certified copies (e.g., passports, utility bills). The tool scans each document for proper certification wording (“I certify this is a true copy”), date within 3 months, and certifier’s credentials. <strong>Example output:</strong> A colour‑coded spreadsheet: green = compliant, yellow = warning (expiring soon), red = reject. <strong>How it works:</strong> Combines OCR with a custom rule engine that understands 15+ certification formats used by different jurisdictions.</p>
                 </div>
 
+                <!-- STR/SAR Drafting Assistant -->
                 <div id="str-assistant" class="service-section">
                     <img src="images/pic05.jpg" alt="STR Assistant" class="service-img" />
                     <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> STR/SAR Drafting Assistant</h3>
-                    <p class="desc">Analyses transaction data, flags unusual patterns, and drafts suspicious transaction report narratives for MLRO review. The MLRO retains final approval and can edit before submission.</p>
+                    <p class="desc"><strong>What it looks like:</strong> A dashboard showing flagged transactions with risk scores. Clicking a flag opens a draft STR narrative pre‑filled with transaction details, unusual pattern descriptions, and regulatory citations. <strong>Example output:</strong> A complete STR ready for MLRO review – saves 2 hours per report. <strong>How it works:</strong> Uses anomaly detection on transaction data (amount, frequency, counterparty) and an LLM to generate narrative in your jurisdiction’s required format (e.g., FINTRAC, FinCEN, MAS).</p>
                 </div>
 
+                <!-- Compliance Librarian -->
                 <div id="compliance-librarian" class="service-section">
                     <img src="images/pic06.jpg" alt="Compliance Librarian" class="service-img" />
                     <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> Compliance Librarian</h3>
-                    <p class="desc">A chat‑based assistant that retrieves the right documents from your secure store, checks expiration dates, and assembles submission packs on request. Works with natural language queries like “Show me all expired CDD for client X”.</p>
+                    <p class="desc"><strong>What it looks like:</strong> A chat interface (like ChatGPT) connected to your secure document store. You ask: “Show me all expired CDD for client Acme Corp”. The tool returns a list of documents with expiration dates and can generate a renewal request email. <strong>Example output:</strong> “3 documents expired: Passport (expired 2025-01-10), Utility bill (expired 2025-02-01).” <strong>How it works:</strong> Uses a local embedding model to index your documents; queries are converted to vector search. All data stays on‑premise.</p>
                 </div>
 
+                <!-- Ongoing Monitoring Engine -->
                 <div id="ongoing-monitoring" class="service-section">
                     <img src="images/pic07.jpg" alt="Ongoing Monitoring" class="service-img" />
                     <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> Ongoing Monitoring Engine</h3>
-                    <p class="desc">Periodically re‑screens client names against updated sanctions/PEP lists and scrapes adverse media sources. Reports only what’s changed, with a clear audit trail.</p>
+                    <p class="desc"><strong>What it looks like:</strong> A scheduled job that runs nightly. It re‑screens your entire client database against updated sanctions lists and scrapes adverse media (news, watchdogs). <strong>Example output:</strong> A daily email summary: “3 clients newly matched to OFAC SDN list – review required.” <strong>How it works:</strong> Uses fuzzy matching (Levenshtein, phonetic) to catch name variations. Only reports changes, not full re‑screens, to reduce noise.</p>
                 </div>
 
+                <!-- Corporate Documents Librarian -->
                 <div id="corporate-librarian" class="service-section">
                     <img src="images/pic08.jpg" alt="Corporate Librarian" class="service-img" />
                     <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> Corporate Documents Librarian</h3>
-                    <p class="desc">Specialised version of the Compliance Librarian focused on corporate entities – retrieves articles of incorporation, ownership charts, and board minutes, and checks validity dates.</p>
+                    <p class="desc"><strong>What it looks like:</strong> Specialised version of Compliance Librarian focused on corporate entities. Upload incorporation certificates, registers of directors, shareholder lists. <strong>Example output:</strong> A “corporate health dashboard” showing which entities have missing documents, expired certificates, or upcoming filing deadlines. <strong>How it works:</strong> Adds extra parsers for corporate document types (e.g., extracts UBO percentage from shareholder registers).</p>
                 </div>
 
+                <!-- Board/MI Report Compiler -->
                 <div id="board-reports" class="service-section">
                     <img src="images/pic09.jpg" alt="Board Reports" class="service-img" />
                     <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> Board/MI Report Compiler</h3>
-                    <p class="desc">Pulls data from multiple compliance sources (transaction monitoring, screening, case management) and drafts ready‑to‑review board packs and management information reports in Word/PDF.</p>
+                    <p class="desc"><strong>What it looks like:</strong> A report generation wizard. Select date range, KPIs (e.g., number of alerts, average review time, sanctions hits). <strong>Example output:</strong> A 10‑page board pack with charts, tables, and executive summary, in Word or PDF. <strong>How it works:</strong> Pulls data from your existing compliance systems (via API or database connectors) and uses a template engine to produce a consistent, branded report.</p>
                 </div>
 
+                <!-- Regulatory Change Impact Assessor -->
                 <div id="regulatory-impact" class="service-section">
                     <img src="images/pic04.jpg" alt="Regulatory Impact" class="service-img" />
                     <h3><img src="images/logo.png" alt="logo" class="logo-icon" /> Regulatory Change Impact Assessor</h3>
-                    <p class="desc">Maps new regulatory requirements directly to your internal controls, not just policy wording. Shows exactly which controls need updating, with suggested remediation steps.</p>
+                    <p class="desc"><strong>What it looks like:</strong> Upload a new regulation (PDF or text). The tool maps each article to your internal controls (policies, procedures, systems). <strong>Example output:</strong> A matrix showing “Control 4.2 – Client Risk Rating” is impacted by Article 7 of the new regulation; suggested action: “Update risk scoring model”. <strong>How it works:</strong> Uses an LLM to extract obligations and a knowledge graph of your controls. Output includes a prioritised remediation plan.</p>
                 </div>
 
                 <div style="text-align: center; margin: 3em 0;">
@@ -181,7 +169,7 @@
             </div>
         </section>
 
-        <!-- Footer -->
+        <!-- Footer (same as index) -->
         <section id="footer">
             <div class="inner">
                 <h2 class="major">Get in touch</h2>
